@@ -83,6 +83,10 @@ figure.pic1 {
   z-index: 20;
 }
 
+body{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
 
 </style>
 <script type="text/javascript" src="js/jquery.min.js"></script>
