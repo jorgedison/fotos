@@ -9,7 +9,7 @@
     <link rel="icon" href="../../favicon.ico">
     <title></title>
   </head>
-<body  src="images/appfoto-bg-hueco.png" width="100%" height="100%">
+<body>
 
 <img src="images/appfoto-bg-hueco.png" width="100%" height="100%" usemap="#image-map" id="take_snapshots" onClick="take_snapshot()">
 
