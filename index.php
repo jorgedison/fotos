@@ -11,31 +11,6 @@
   </head>
 <body>
 
-<img src="images/appfoto-bg-hueco.png" width="100%" height="100%" usemap="#image-map" id="take_snapshots" onClick="take_snapshot()">
-
-<map name="take_snapshots" >
-    <area target="" alt="" title="" href=""  coords="1,2,1916,1073" shape="rect" >
-</map>
-
-    <div class="container" align="center">
-        <div class="col-md-6">
-            <div class="text-center">
-        <div id="camera_info"></div>
-    <div id="camera"></div><br>
-    <!--<button id="take_snapshots" class="btn btn-success btn-sm"  onClick="take_snapshot()">Take Snapshots</button>-->
-      </div>
-        </div>
-        <!--<div class="col-md-6">
-            <table class="table table-bordered">
-
-            <tbody id="imagelist">
-            
-            </tbody>
-        </table>
-        </div>-->
-    </div>
-  </body>
-</html>
 <style>
 #camera {
   position: absolute;
@@ -46,8 +21,15 @@
 
 }
 
-#body1 {
+body {
     background-image: url("images/appfoto-bg-hueco.png");
+        height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 div#gallery {
@@ -89,6 +71,33 @@ body{
 }
 
 </style>
+
+<img src="images/appfoto-bg-hueco.png" width="100%" height="100%" usemap="#image-map" id="take_snapshots" onClick="take_snapshot()">
+
+<map name="take_snapshots" >
+    <area target="" alt="" title="" href=""  coords="1,2,1916,1073" shape="rect" >
+</map>
+
+    <div class="container" align="center">
+        <div class="col-md-6">
+            <div class="text-center">
+        <div id="camera_info"></div>
+    <div id="camera"></div><br>
+    <!--<button id="take_snapshots" class="btn btn-success btn-sm"  onClick="take_snapshot()">Take Snapshots</button>-->
+      </div>
+        </div>
+        <!--<div class="col-md-6">
+            <table class="table table-bordered">
+
+            <tbody id="imagelist">
+            
+            </tbody>
+        </table>
+        </div>-->
+    </div>
+  </body>
+</html>
+
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script src="jpeg_camera/jpeg_camera_with_dependencies.min.js" type="text/javascript"></script>
 <script>
