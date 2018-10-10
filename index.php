@@ -39,7 +39,7 @@
 <style>
 #camera {
   position: absolute;
-  width: 28.5%;
+  width: 32%;
   height: 750px;
   top: 100px; left: 660px;
   z-index:1;
@@ -102,7 +102,7 @@ figure.pic1 {
     
     snapshot.upload({api_url: "action.php"}).done(function(response) {
 
-//$('#imagelist').prepend("<tr><td><img src='"+response+"' class='body1' style='width:28.5%;height:750px;z-index:2;position:absolute;top:100px;left:660px;'"+response+"</td></tr>");
+//$('#imagelist').prepend("<tr><td><img src='"+response+"' class='body1' style='width:32%;height:750px;z-index:2;position:absolute;top:100px;left:660px;'"+response+"</td></tr>");
 //$('#imagelist').prepend("<div id='background'><div id='gallery'><figure class='pic1'><img src='"+response+"' /><figcaption></figcaption></figure></div></div>");
 }).fail(function(response) {
   alert("Upload failed with status " + response);
@@ -115,7 +115,7 @@ function done(){
     function take_snapshot() {     
       setTimeout(function(){
         window.location.reload(1);
-      }, 2000);
+      }, 3000);
       
     }
 </script>
