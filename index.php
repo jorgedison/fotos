@@ -9,9 +9,9 @@
     <link rel="icon" href="../../favicon.ico">
     <title></title>
   </head>
-<body>
+<body  src="images/appfoto-bg-hueco.png" width="100%" height="100%">
 
-<img src="images/appfoto-bg-hueco.png" usemap="#image-map" id="take_snapshots" onClick="take_snapshot()">
+<img src="images/appfoto-bg-hueco.png" width="100%" height="100%" usemap="#image-map" id="take_snapshots" onClick="take_snapshot()">
 
 <map name="take_snapshots" >
     <area target="" alt="" title="" href=""  coords="1,2,1916,1073" shape="rect" >
