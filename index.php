@@ -9,39 +9,34 @@
     <link rel="icon" href="../../favicon.ico">
     <title></title>
   </head>
-<body>
+<body onClick="take_snapshot()" id="take_snapshots" >
 
 <style>
 #camera {
   position: absolute;
-  width: 32%;
-  height: 750px;
-  top: 100px; left: 660px;
+  width: 36%;
+  height: 675px;
+  top: 8px; left: 438px;
   z-index:1;
 
 }
-
+/*
 body {
     background-image: url("images/appfoto-bg-hueco.png");
-        height: 100%; 
 
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 
-}
+}*/
 
 div#gallery {
   width: 800px;
   margin: auto;
 }
-
+/*
 #background img {
   height: 150px;
   margin: 0px;
 }
-
+*/
 #background figure {
   float: left;
   position: relative;
@@ -52,27 +47,44 @@ div#gallery {
   margin: 10px;
   box-shadow: 1px 2px 3px black;
 }
-
+*/
 figure.pic1 {
   -webkit-transform : rotate(0deg);
   z-index: 1;
 }
 
-
+/*
 #background figure:hover {
   box-shadow: 5px 10px 100px black;
   -webkit-transform: scale(1.1,1.1);
   z-index: 20;
-}
+}*/
 
 body{
-  overflow-x: hidden;
-  overflow-y: hidden;
+  /*background-image: url("images/appfoto-bg-hueco.png");*/
+  background: url(images/appfoto-bg.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+div.polaroid {
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img {width: 100%}
+
+div.container {
+    text-align: center;
+    padding: 10px 20px;
 }
 
 </style>
-
-<img src="images/appfoto-bg-hueco.png" width="100%" height="100%" usemap="#image-map" id="take_snapshots" onClick="take_snapshot()">
+<!--
+<img src="images/appfoto-bg-hueco.png" usemap="#image-map" id="take_snapshots" onClick="take_snapshot()">-->
 
 <map name="take_snapshots" >
     <area target="" alt="" title="" href=""  coords="1,2,1916,1073" shape="rect" >
@@ -95,8 +107,6 @@ body{
         </table>
         </div>-->
     </div>
-  </body>
-</html>
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script src="jpeg_camera/jpeg_camera_with_dependencies.min.js" type="text/javascript"></script>
@@ -115,8 +125,10 @@ body{
     
     snapshot.upload({api_url: "action.php"}).done(function(response) {
 
-//$('#imagelist').prepend("<tr><td><img src='"+response+"' class='body1' style='width:32%;height:750px;z-index:2;position:absolute;top:100px;left:660px;'"+response+"</td></tr>");
-//$('#imagelist').prepend("<div id='background'><div id='gallery'><figure class='pic1'><img src='"+response+"' /><figcaption></figcaption></figure></div></div>");
+//$('#imagelist').prepend("<tr><td><img src='"+response+"' class='polaroids' style='width:50%;height:750px;z-index:2;position:absolute;top:1000px;left:660px;'"+response+"</td></tr>");
+//$('#imagelist').prepend("<div id='background'><div id='gallery'><figure class='polaroids'><img src='"+response+"' /><figcaption></figcaption></figure></div></div>");
+$('#imagelist').prepend("<div class='polaroid'><img src='"+response+"' style='width:100%'><div class='container'><p>Cinque Terre</p></div></div>");
+
 }).fail(function(response) {
   alert("Upload failed with status " + response);
 });
@@ -132,3 +144,6 @@ function done(){
       
     }
 </script>
+
+  </body>
+</html>
